@@ -1,26 +1,28 @@
-import React, { useState } from "react"
-import produto from '../../produtos/produtos.json'
+import React from "react"
 import { CardContainer, Container, StyledButton, StyledImagem } from "./styles";
 
-function CardProdutos(props) {
-    const [valor, setContador] = useState("");
+function CardProdutos({item, listaDeCompra}) {
+    function addCarrinho () {
+        const produtoCarrinho = {
+          id:item.id,
+          name:item.name,
+          preco:item.price,
+          precoTotal: item.price *1,
+          quantidade:1
+        } 
+        listaDeCompra(produtoCarrinho)
+      }
 
-    const handleContador = (item) => {
-        props.setAdicionarProduto(item);
-      };
-
-    const listItems = produto.map((item) =>
-        <CardContainer key={item.id}>
+   
+    return (
+        <Container>
+            <CardContainer key={item.id}>
             <StyledImagem src={item.imageUrl} alt="imagem dos produtos" />
             <h1>{item.name}</h1>
             <p>{item.type}</p>
             <p>${item.price},00</p>
-            <p><StyledButton type="submit" onClick={() => handleContador(item)}>Adicionar ao Carrinho</StyledButton></p>
+            <p><StyledButton type="submit" onClick={()=>addCarrinho()}>Adicionar ao Carrinho</StyledButton></p>
         </CardContainer>
-    );
-    return (
-        <Container>
-            {listItems}
         </Container>
     )
 }

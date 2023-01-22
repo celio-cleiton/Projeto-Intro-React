@@ -14,6 +14,17 @@ export const FooterContainer = styled.footer`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  img{
+    height: 15px;
+    width: 15px;
+    color: white;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+  }
+
 `;
 
 export const Copyright = styled.div`

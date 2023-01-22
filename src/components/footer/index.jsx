@@ -18,6 +18,8 @@ function Footer() {
       <DeveloperInfo>
         Developed by <A href="#">Célio Cleiton</A>
       </DeveloperInfo>
+      <a href='https://github.com/celio-cleiton' target="_blank" rel="noopener noreferrer"><img src="https://cdn-icons-png.flaticon.com/512/779/779088.png" alt="githug icon" />Github<p> Aluno: Célio Cleiton Do Vale Rodrigues - Barbosa C</p>
+             </a>
     </FooterContainer>
   );
 }

@@ -2,8 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 25px;
+  justify-content: center;
 `;
 
 export const RegisterButton = styled.button`
@@ -18,3 +21,13 @@ export const RegisterButton = styled.button`
   }
 `;
 
+export const StyledCarrinho =styled.div`
+display: flex;
+width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+`
